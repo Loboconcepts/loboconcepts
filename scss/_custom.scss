@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
+
+body {
+  overflow-x: hidden;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+:root {
+  --scroll-y: 0;
+}
+
+.font-display {
+  font-family: 'Angkor', cursive;
+};
+
+@each $color, $value in $primaries {
+  .bg-cs-primary-#{$color} {
+    background-color: $value;
+  };
+  .text-cs-primary-#{$color} {
+    color: $value;
+  };
+  .btn-cs-primary-#{$color} {
+    @include button-variant($value, $value);
+  };
+};
+
+@each $color, $value in $secondaries {
+  .bg-cs-secondary-#{$color} {
+    background-color: $value;
+  };
+  .text-cs-secondary-#{$color} {
+    color: $value;
+  };
+  .btn-cs-secondary-#{$color} {
+    @include button-variant($value, $value);
+  };
+};
+
+@each $color, $value in $tertiaries {
+  .bg-cs-tertiary-#{$color} {
+    background-color: $value;
+  };
+  .text-cs-tertiary-#{$color} {
+    color: $value;
+  };
+  .btn-cs-tertiary-#{$color} {
+    @include button-variant($value, $value);
+  };
+};
+
+@each $color, $value in $grays {
+  .bg-cs-gray-#{$color} {
+    background-color: $value;
+  };
+  .text-cs-gray-#{$color} {
+    color: $value;
+  };
+  .btn-cs-gray-#{$color} {
+    @include button-variant($value, $value);
+  };
+};
+
+.purpleGradient {
+  background: linear-gradient(45deg, $primary-50, $primary-200);
+}
+.brandLogo {
+  width: 70px;
+  position: relative;
+}
+.brandName {
+  position: relative;
+  color: $tertiary-50;
+  font-size: 22px;
+  display: block;
+}
+.brandCover {
+  background-color: $primary-900;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.brandDescription {
+  width: 100%;
+  padding: 0 30px;
+  display: inline-block;
+  color: $primary-50;
+  font-weight: 100;
+  font-size: 16px;
+  padding: 0 20px;
+  text-align: center;
+}
+.brand {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.headerSpacing {
+  display: none;
+
+}
+
+section {
+  padding: 50px 0;
+  @include media-breakpoint-up(sm) {
+    padding: 100px 0;
+  }
+}
+
+@keyframes blink{
+  0%,100%{
+    opacity: 0;
+  }
+  50%,80%{
+    opacity: 1;
+  }
+}
+
+#menu_icon {
+  width:30px;
+  height:30px;
+}
+
+#nav_toggle {
+  position: relative;
+  border: none;
+  padding: 15px;
+  border-radius: 5%;
+  top: 0px; 
+  right: 0px;
+  z-index: 10000;
+  background: transparent;
+}
+
+rect {
+  fill: #ffffff;
+  transition: all .2s ease-in-out;
+}
+
+.close {
+  & rect {
+    // fill: #000000;
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(5%, -30%);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(-35%, -15%);
+    }
+  }
+}
+
+.downloadAppstore {
+  display: block;
+  width: 150px;
+}
+
+.header-image {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 10px #000000;
+  &.dead-letters {
+    background-image: url('../images/dead-letters-img.jpg')
+  }
+  &.liveNovelPublishing {
+    background: linear-gradient(to right,#e8d2ba,#b3b5ea,#70fae5);
+  }
+  &.groundedSun {
+    background-image: url('../images/groundedSun.jpg')
+  }
+  &.thanosSnap {
+    background-image: url('../images/thanos-snap-pre.jpg')
+  }
+}
+
+#contact {
+  background: linear-gradient(45deg, RGB(101,0,30), RGB(0,0,80));
+  // border-bottom: 10px solid $tertiary-200;
+}
+
+.parallax {
+
+  // background-color: RGB(clamp(235,calc(235 + var(--scroll-y) * .3),255), clamp(211,calc(211 + var(--scroll-y) * .3),255), clamp(163,calc(163 + var(--scroll-y) * .5),255));
+  background-color: RGB(clamp(25,calc(235 - var(--scroll-y) * .8),235), clamp(33,calc(211 - var(--scroll-y) * .8),211), clamp(42,calc(163 - var(--scroll-y) * .8),163));
+  background: linear-gradient(45deg, RGB(clamp(95,calc(235 - var(--scroll-y) * .8),235), clamp(113,calc(211 - var(--scroll-y) * .8),211), clamp(132,calc(163 - var(--scroll-y) * .8),163)), RGB(clamp(25,calc(235 - var(--scroll-y) * .8),235), clamp(33,calc(211 - var(--scroll-y) * .8),211), clamp(42,calc(163 - var(--scroll-y) * .8),163)));
+  // &::before {
+  //   content: '';
+  //   position: fixed;
+  //   display: block;
+  //   top: 0;
+  //   opacity: calc(0 + ((1 / 300) * (var(--scroll-y) - 100)));
+  //   height: 100vh;
+  //   width: 100%;
+  //   background-attachment: fixed;
+  //   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%234e555e' fill-opacity=' 0.4' %3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  // }
+
+  .headerSpacing {
+    display: block;
+    height: 100vh;
+    background-color: RGBA(clamp(0,calc(var(--scroll-y) * .5),39), 0, clamp(40,calc(var(--scroll-y) * .5),124), 1);
+    background: linear-gradient(45deg, RGBA(clamp(39,calc(101 - var(--scroll-y) * .5),101), 0, clamp(30,calc(var(--scroll-y) * .5),124), 1), RGBA(clamp(0,calc(var(--scroll-y) * .5),39), 0, clamp(80,calc(var(--scroll-y) * .5),124), 1));
+    // width: 100%;
+    width: clamp(98%,calc(var(--scroll-y) * .05% + 98%),100%);
+    height: 96vh; 
+    margin: clamp(0px,calc(10px - var(--scroll-y) * .05%),10px) auto;
+
+    clip-path: polygon(0% 15%, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0% 15%, 100% 0, 100% 85%, 0 100%);
+    z-index: 1;
+  }
+  .brandName {
+    margin-top: calc(var(--scroll-y) * -.2px);
+    z-index: 5;
+    opacity: calc(1 - ((1 / 300) * (var(--scroll-y) - 100)));
+    @include media-breakpoint-up(sm) {
+      opacity: calc(1 - ((1 / 100) * (var(--scroll-y) - 100)));
+    }
+    font-size: clamp(22px, calc(var(--scroll-y) * -.1px + calc(1.625rem + 2.5vw)), calc(1.625rem + 2.5vw));
+    
+  }
+  .brandDescription {
+    z-index: 5;
+    opacity: calc(1 - ((1 / 200) * (var(--scroll-y) - 50)));
+    @include media-breakpoint-up(sm) {
+      opacity: calc(1 - ((1 / 50) * (var(--scroll-y) - 50)));
+    }
+    font-size: 22px;
+  }
+  .brandLogo {
+    z-index: 5;
+    width: clamp(70px, calc(var(--scroll-y) * -1px + 50%), 50%);
+    max-height: 50vh;
+  }
+  .brandCover {
+    position: fixed;
+    background-color: rgba(39, 0, 124, calc(0 + ((1 / 200) * (var(--scroll-y) - 200))));
+    height: 63px;
+    z-index: 5;
+  }
+  #scrollDownIndicator {
+    display: block;
+    position: fixed;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    bottom: 15vh;
+    animation: blink 2s linear infinite 2s;
+    &.hideInd {
+      display: none;
+    };
+    & svg {
+      fill: $primary-50;
+    }
+  }
+  #nav_toggle {
+    position: fixed;
+    top: clamp(0%, calc(2% - var(--scroll-y) * .03%), 2%);
+    right: clamp(0%, calc(2% - var(--scroll-y) * .03%), 2%);
+  }
+  #main_nav {
+    transition: all 200ms ease-in-out;
+    transform: translateX(100%);
+    text-align: right;
+    padding: 2em;
+    width: 100%; 
+    height:100vh; 
+    background: linear-gradient(90deg, $primary-900, $primary-600); 
+    position: fixed; 
+    display: flex !important;
+    align-content: stretch;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000; 
+    opacity: 0;
+    visibility: hidden;
+    top: 0; 
+    left:0;
+    overflow-y: auto;
+    & ul {
+      padding: 0;
+    }
+    & li {
+      transition: transform 750ms ease-in-out;
+      transform: translateX(100%);
+      list-style-type:none;
+      font-size: 6vmin;
+      font-weight:lighter;
+      & a {
+        transition: all 250ms ease-in-out;
+        &.link-section-head {
+          font-weight: bold !important;
+          border-bottom:1px solid #ffffff;
+        }
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+    &.show_nav {
+      transition: all 400ms ease-in-out;
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+      & li {
+        transform: translateX(0);
+      }
+      
+    }
+    & a {
+      text-decoration: none;
+    }
+  }
+}

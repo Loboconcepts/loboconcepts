@@ -1,0 +1,107 @@
+// https://palette.saas-ui.dev/
+// https://materialpalettes.com/
+// https://colorffy.com/css-generator
+
+/** SCSS PRIMARY COLORS */
+$primary-50:  #ebe4f3;
+$primary-100: #cdbde1;
+$primary-200: #ac91ce;
+$primary-300: #8c65bb;
+$primary-400: #7444ad;
+$primary-500: #5c229f;
+$primary-600: #531e9a;
+$primary-700: #471592;
+$primary-800: #3b0e8a;
+$primary-900: #27007c;
+
+$secondary-50:  #f2e3f1;
+$secondary-100: #deb9dc;
+$secondary-200: #c98ac6;
+$secondary-300: #b35cb0;
+$secondary-400: #a338a0;
+$secondary-500: #930d90;
+$secondary-600: #860a8b;
+$secondary-700: #750384;
+$secondary-800: #65007c;
+$secondary-900: #49006e;
+
+$tertiary-50:  #f7eeda;
+$tertiary-100: #ebd3a3;
+$tertiary-200: #deb767;
+$tertiary-300: #d19b27;
+$tertiary-400: #c98800;
+$tertiary-500: #c27500;
+$tertiary-600: #c06b00;
+$tertiary-700: #bb5c00;
+$tertiary-800: #b64d00;
+$tertiary-900: #ae3100;
+
+
+$white:    #fff;
+$gray-50:  #f9fafa;
+$gray-100: #f1f1f2;
+$gray-200: #e6e7e9;
+$gray-300: #d2d4d6;
+$gray-400: #aaadb1;
+$gray-500: #7a7f86;
+$gray-600: #4e555e;
+$gray-700: #2f3741;
+$gray-800: #19212a;
+$gray-900: #141a22;
+$black:    #000;
+
+$primaries: (
+  "50":  $primary-50,
+  "100": $primary-100,
+  "200": $primary-200,
+  "300": $primary-300,
+  "400": $primary-400,
+  "500": $primary-500,
+  "600": $primary-600,
+  "700": $primary-700,
+  "800": $primary-800,
+  "900": $primary-900
+);
+
+$secondaries: (
+  "50" : $secondary-50,
+  "100" : $secondary-100,
+  "200" : $secondary-200,
+  "300" : $secondary-300,
+  "400" : $secondary-400,
+  "500" : $secondary-500,
+  "600" : $secondary-600,
+  "700" : $secondary-700,
+  "800" : $secondary-800,
+  "900" : $secondary-900
+);
+
+$tertiaries: (
+  "50" : $tertiary-50,
+  "100" : $tertiary-100,
+  "200" : $tertiary-200,
+  "300" : $tertiary-300,
+  "400" : $tertiary-400,
+  "500" : $tertiary-500,
+  "600" : $tertiary-600,
+  "700" : $tertiary-700,
+  "800" : $tertiary-800,
+  "900" : $tertiary-900
+);
+
+$grays: (
+  "50": $gray-50,
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+
+$primary: $primary-900;
+$secondary: $secondary-800;
+$tertiary: $tertiary-50;
