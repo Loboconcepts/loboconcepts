@@ -5,6 +5,7 @@ body {
   &.noscroll {
     overflow: hidden;
   }
+  background-color: #2c3642;
 }
 
 :root {
@@ -191,6 +192,7 @@ rect {
   background: linear-gradient(45deg, RGB(101,0,30), RGB(0,0,80));
   // border-bottom: 10px solid $tertiary-200;
 }
+
 
 .parallax {
 
